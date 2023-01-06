@@ -22,53 +22,15 @@ const Profile = () => {
     navigate("/");
   };
   return (
-    <Box display={"flex"} flexDirection="column">
+    <Box>
       {user && (
-        <>
-          {" "}
-          <Typography
-            textAlign={"center"}
-            variant="h3"
-            fontFamily={"cursive"}
-            padding={2}
-            color="#907C6E"
-          >
-            User Profile
-          </Typography>
-          <Typography fontFamily={"quicksand"} padding={1} textAlign="left">
-            Name:{user.name}
-          </Typography>
-          <Typography fontFamily={"quicksand"} padding={1} textAlign="left">
-            E-mail:{user.email}
-          </Typography>
-          <Button
-            onClick={handleClick}
-            sx={{ mr: "auto", width: "15%" }}
-            variant="contained"
-            color="black"
-          >
-            Logout
-          </Button>
-          <Box
-            display={"flex"}
-            flexDirection="column"
-            justifyContent={"center"}
-            alignItems="center"
-          >
-            {user.posts.map((post, index) => (
-              <Diaryitem
-                key={index}
-                title={post.title}
-                date={post.date}
-                description={post.description}
-                id={post.id}
-                image={post.image}
-                location={post.location}
-                user={user._id}
-              />
-            ))}
-          </Box>{" "}
-        </>
+        <Button
+          onClick={handleClick}
+          sx={{ mr: "auto", width: "15%", color: "black" }}
+          variant="contained"
+        >
+          Logout
+        </Button>
       )}
     </Box>
   );

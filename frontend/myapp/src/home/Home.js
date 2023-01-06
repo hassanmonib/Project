@@ -31,9 +31,6 @@ const Home = () => {
           Let's Share Tasty Food Diaries...
         </Typography>
         <Box margin="auto">
-          <Button variant="outlined" sx={{ marginRight: 2 }}>
-            Share your Diary
-          </Button>
           <Button
             LinkComponent={Link}
             to="/diaries"

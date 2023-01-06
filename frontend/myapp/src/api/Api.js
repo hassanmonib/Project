@@ -4,6 +4,7 @@ export const getPosts = async () => {
   if (res.status !== 200) {
     return console.log("Some error Occured");
   }
+
   return res.data;
 };
 export const sendAuthRequest = async (signup, data) => {
